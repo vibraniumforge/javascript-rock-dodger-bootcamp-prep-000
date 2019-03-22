@@ -1,6 +1,4 @@
-/**
- * Don't change these constants!
- */
+
 const DODGER = document.getElementById('dodger')
 const GAME = document.getElementById('game')
 const GAME_HEIGHT = 400
@@ -12,14 +10,7 @@ const START = document.getElementById('start')
 
 var gameInterval = null
 
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
-
 function checkCollision(rock) {
-  // implement me!
-  // use the comments below to guide you!
   const top = positionToInteger(rock.style.top)
 
   // rocks are 20px high
@@ -27,12 +18,9 @@ function checkCollision(rock) {
   // GAME_HEIGHT - 20 - 20 = 360px;
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left)
-
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
     const dodgerRightEdge = positionToInteger(DODGER.style.left + 40);
-
     const rockLeftEdge = positionToInteger(rock.style.left)
-
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = positionToInteger(rock.style.left +20);
 
@@ -50,7 +38,6 @@ function checkCollision(rock) {
     }
   }
 
-
 function createRock(x) {
   const rock = document.createElement('div')
   rock.className = 'rock'
@@ -58,7 +45,6 @@ function createRock(x) {
 
   // Hmmm, why would we have used `var` here?
   var top = 0
-
   rock.style.top = top
 
   /**
@@ -108,7 +94,7 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval=null;
-  removeEventListener("moveDodger");
+  document.removeEventListener("moveDodger");
   alert("YOU LOSE!");
 }
 
