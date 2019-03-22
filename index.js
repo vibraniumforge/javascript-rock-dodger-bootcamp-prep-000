@@ -41,10 +41,11 @@ function createRock(x) {
     } else {
       rock.remove();
     }
+  }
     window.requestAnimation(moveRock);
     ROCKS.push(rock)
     return rock
-  }
+  
 }
 
 function endGame() {
