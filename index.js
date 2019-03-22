@@ -76,40 +76,28 @@ function moveDodger(e) {
 function moveDodgerLeft() {
    window.requestAnimationFrame(function() {
      const left = positionToInteger(DODGER.style.left)
-     if (left < 360) {
-       dodger.style.left = `${left + 4}px`;
+     if (left > 0) {
+       dodger.style.left = `${left - 4}px`;
      }
    });
 }
 
 function moveDodgerRight() {
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-   window.requestAnimationFrame();
-   var rightNumbers = dodger.style.right.replace('px', '')
-   var right = parseInt(rightNumbers, 10)
-
-   if (right > 0) {
-     dodger.style.right = `${right - 4}px`
-   }
+  window.requestAnimationFrame(function() {
+    const left = positionToInteger(DODGER.style.left)
+    if (left < 360) {
+      dodger.style.left = `${left + 4}px`;
+    }
+  });
 }
 
-/**
- * @param {string} p The position property
- * @returns {number} The position as an integer (without 'px')
- */
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
 }
 
 function start() {
   window.addEventListener('keydown', moveDodger)
-
   START.style.display = 'none'
-
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000)
