@@ -59,9 +59,8 @@ function endGame() {
     rock.remove();
   })
   document.removeEventListener("keydown", "moveDodger");
-  
-  START.innerHTML = 'Play again?'
-  START.style.display = 'inline'
+  START.innerHTML = 'Play again?';
+  START.style.display = 'inline';
   alert("YOU LOSE!");
 }
 
