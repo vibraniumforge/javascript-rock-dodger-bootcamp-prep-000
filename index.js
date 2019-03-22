@@ -143,6 +143,12 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+   window.requestAnimationFrame();
+   var rightNumbers = dodger.style.right.replace('px', '')
+   var right = parseInt(rightNumbers, 10)
+
+   if (right > 0) {
+     dodger.style.right = `${right - 4}px`
 }
 
 /**
