@@ -63,9 +63,9 @@ function moveDodger(e) {
       e.preventDefault()
       e.stopPropagation()
     }
-   if (const ===LEFT_ARROW) {
+   if (code ===LEFT_ARROW) {
      moveDodgerLeft();
-   } else if (const ===RIGHT_ARROW) {
+   } else if (code ===RIGHT_ARROW) {
      moveDodgerRight();
    }
 }
