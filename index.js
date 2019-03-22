@@ -150,6 +150,7 @@ function moveDodgerRight() {
    if (right > 0) {
      dodger.style.right = `${right - 4}px`
 }
+}
 
 /**
  * @param {string} p The position property
