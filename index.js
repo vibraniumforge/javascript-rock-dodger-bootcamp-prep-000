@@ -94,7 +94,7 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval=null;
-  document.removeEventListener("moveDodger");
+  document.removeEventListener("moveDodger", "EventTarget");
   alert("YOU LOSE!");
 }
 
