@@ -53,7 +53,6 @@ function checkCollision(rock) {
 
 function createRock(x) {
   const rock = document.createElement('div')
-  window.requestAnimationFrame();
   rock.className = 'rock'
   rock.style.left = `${x}px`
 
@@ -122,11 +121,11 @@ function moveDodger(e) {
    if (e.which ===LEFT_ARROW) {
      e.preventDefault();
      e.stopPropogation();
-     moveDodgerLeft();
+     window.requestAnimationFrame(moveDodgerLeft);
    } else if (e.which ===RIGHT_ARROW) {
      e.preventDefault();
      e.stopPropogation();
-     moveDodgerRight();
+     window.requestAnimationFrame(moveDodgerRight);
    }
 }
 
