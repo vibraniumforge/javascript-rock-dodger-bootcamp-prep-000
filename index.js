@@ -29,7 +29,6 @@ function createRock(x) {
   rock.style.left = `${x}px`
   var top = 0
   rock.style.top = top
-
   GAME.appendChild(rock)
 
   function moveRock() {
@@ -45,7 +44,6 @@ function createRock(x) {
     window.requestAnimation(moveRock);
     ROCKS.push(rock)
     return rock
-
 }
 
 function endGame() {
@@ -62,9 +60,9 @@ function endGame() {
 function moveDodger(e) {
     const code = e.which
    if (const ===LEFT_ARROW) {
-     moveDodgerLeft;
+     moveDodgerLeft();
    } else if (const ===RIGHT_ARROW) {
-     moveDodgerRight;
+     moveDodgerRight();
    }
 }
 
