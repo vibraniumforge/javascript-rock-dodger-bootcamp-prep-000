@@ -54,8 +54,8 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  gameInterval=null;
-  document.removeEventListener("moveDodger", "EventTarget");
+  clearInterval(gameInterval)
+  document.removeEventListener("keydown", "moveDodger");
   alert("YOU LOSE!");
 }
 
