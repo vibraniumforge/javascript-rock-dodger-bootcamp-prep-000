@@ -36,12 +36,12 @@ function createRock(x) {
       return endGame();
     }
     if (top < GAME_HEIGHT) {
-      window.requestAnimation(moveRock);
+      window.requestAnimationFrame(moveRock);
     } else {
       rock.remove();
     }
   }
-    window.requestAnimation(moveRock);
+    window.requestAnimationFrame(moveRock);
     ROCKS.push(rock)
     return rock
 }
