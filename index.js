@@ -45,7 +45,7 @@ function createRock(x) {
     window.requestAnimation(moveRock);
     ROCKS.push(rock)
     return rock
-  
+
 }
 
 function endGame() {
